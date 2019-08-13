@@ -11,5 +11,4 @@ export default class HomeStore {
     @computed get sum() {
         return this.num*5
     }
-
 }

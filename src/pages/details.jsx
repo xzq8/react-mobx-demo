@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
 import { observer, inject } from 'mobx-react';
 
-@inject('HomeStore')
+@inject('store')
+
 @observer
-export default class TodoList extends Component{
+
+class Home extends Component{
     componentDidMount(){
  
     }
     render(){
-        const { HomeStore } = this.props;
+        const { store } = this.props;
         debugger
         return(
             <div>
-                <p style={{marginTop:'15px'}}>{`Total ${store.total} items`}</p>
+                <p style={{marginTop:'15px'}}>{`Total ${store.details.title} items`}</p>
             </div>
         )
     }
 }
+
+export default Home

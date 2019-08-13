@@ -1,6 +1,9 @@
 import HomeStore from './home'
 import DetailsStore from './details'
+import Todo from "./todo"
 
 let home = new HomeStore()
 let details = new DetailsStore() 
-export {home,details}
+let todo = new Todo()
+
+export {home,details,todo}
