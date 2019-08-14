@@ -8,7 +8,10 @@ import App from './router';
 import * as stores from './store';
 import * as serviceWorker from './serviceWorker';
 
+import './static/rem'
+import "./css/base.scss"
 import "./css/aimation.css";
+
 FastClick.attach(document.body)
 
 const render = Component => {
