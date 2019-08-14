@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { observer, inject } from 'mobx-react';
+import ReactCSSTransitionGroup from "react-addons-css-transition-group"
 
 @inject('store')
 @observer
@@ -8,7 +9,11 @@ class TodoList extends PureComponent {
     render() {
         const { todolist , store} = this.props;
        return  <ul>
-           <li>
+           <ReactCSSTransitionGroup
+          transitionName="shop"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={300}>
+           <li key={-1}>
                todos:
            </li>
             {
@@ -22,6 +27,7 @@ class TodoList extends PureComponent {
                     </li>
                 })
             }
+            </ReactCSSTransitionGroup>
         </ul>
     }
 }

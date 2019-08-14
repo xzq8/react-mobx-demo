@@ -1,0 +1,15 @@
+.shop-enter {
+  opacity: 0;
+}
+.shop-enter.shop-enter-active {
+  transition: all 1000ms;
+  opacity: 0.7;
+}
+
+.shop-leave {
+  opacity: 1;
+}
+.shop-leave.shop-leave-active {
+  transition: all 300ms;
+  opacity: 0;
+}
