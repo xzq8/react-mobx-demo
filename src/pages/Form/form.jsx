@@ -17,27 +17,27 @@ import QueueAnim from 'rc-queue-anim';
         // console.log(this.props.form.getFieldsValue());
     }
     district = [
-        {value:"请选择客户经理",label:0},
-        {value:"请选择客户经理1",label:1},
-        {value:"请选择客户经理2",label:0}
+        { value: "请选择客户经理", label: 0 },
+        { value: "请选择客户经理1", label: 1 },
+        { value: "请选择客户经理2", label: 2 }
 
     ]
     render() {
-        const { getFieldProps ,getFieldError} = this.props.form;
+        const { getFieldProps, getFieldError } = this.props.form;
         const { store } = this.props;
         let district = this.district
         let errors;
-        return (<QueueAnim type="bottom" transitionName="fade"
-        transitionAppear>
-            <List renderHeader={() => 'Format'}  key="form1">
+        return (<QueueAnim type="bottom"
+        >
+            <List renderHeader={() => 'Format'} key="form1">
                 <InputItem
                     {...getFieldProps('name', {
                         rules: [
                             {
                                 required: true,
                                 messages: "输入正确的姓名"
-                            },{
-                                validator:(rules,callback)=>{
+                            }, {
+                                validator: (rules, callback) => {
                                     callback()
                                 }
                             }]
@@ -68,7 +68,8 @@ import QueueAnim from 'rc-queue-anim';
                 </Picker> */}
                 {(errors = getFieldError()) ? errors.join(',') : null}
                 <button onClick={this.onClick}>submit</button>
-            </List></QueueAnim>
+            </List>
+        </QueueAnim>
         )
     }
 }

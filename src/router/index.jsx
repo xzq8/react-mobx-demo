@@ -15,7 +15,7 @@ export default class App extends Component {
             <HashRouter>
                 <div>
                     <Switch>
-                        <Route exact path='/' component={From} />
+                        <Route exact path='/' component={Todo} />
                         <Route exact path='/home' component={Home} />
                         <Route exact path="/details" component={Details} />
                         <Route component={NotFound} />
